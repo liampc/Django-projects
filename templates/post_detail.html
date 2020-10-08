@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="div_post">
+        <!-- object is created from DetailView -->
+        <h2>{{object.title}}</h2> 
+        <!-- can also use the name of the model it is based on, but with lowercase name -->
+        <p>{{post.text}}</p> 
+    </div>
+
+{% endblock content %}
