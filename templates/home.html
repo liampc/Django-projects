@@ -2,6 +2,11 @@
 
 {% block content %}
 
-    <h1>Home</h1>
+    {% for post in object_list %}
+        <div>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{post.text}}</p>
+        </div>
+    {% endfor %}
 
 {% endblock content %}
