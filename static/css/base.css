@@ -7,4 +7,31 @@ body {
 
  header h1 {
     color:red;
+    border-bottom: 2px rgb(180, 176, 176) solid;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+h2 a {
+    color:blue;
+    text-decoration:none;
+}
+
+.div_post {
+    padding:10px 10px 10px 40px;
 }
