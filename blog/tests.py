@@ -42,3 +42,25 @@ class BlogTests(TestCase):
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, 'A good title')
         self.assertTemplateUsed(response, 'post_detail.html')
+
+    def test_post_create_view(self):
+        response = self.client.post(reverse('post_new'), { # use post because you need to create a new variables
+            'title': 'New title', 
+            'user': self.user,
+            'text': 'New text'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'New title')
+        self.assertContains(response, 'New text')
+
+    def test_post_edit_view(self):
+        response = self.client.post(reverse('post_edit', args='1'), { # use post since variables still needed
+            'title': 'Updated title', 
+            'text': 'Updated text',
+        })
+        self.assertEqual(response.status_code, 302) # use 302 for check redirect status
+
+    def test_post_delete_view(self):
+        response = self.client.get(reverse(
+            'post_delete', args='1')) # use get since there is no variable needed to check, just the page
+        self.assertEqual(response.status_code, 200)
