@@ -7,5 +7,5 @@ from django.views import generic #Create view used under generic class
 # Create your views here.
 class SignupView(generic.CreateView):
     form_class = UserCreationForm 
-    sucess_url = reverse_lazy('login') # for generic class views, only loads url when available
+    success_url = reverse_lazy('login') # for generic class views, only loads url when available
     template_name = 'signup.html'
