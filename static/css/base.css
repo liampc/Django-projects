@@ -1,0 +1,43 @@
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+ header h1 {
+    color:red;
+    border-bottom: 2px rgb(180, 176, 176) solid;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    padding:5px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color:blue;
+}
+
+h2 a {
+    color:blue;
+    text-decoration:none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+.div_post {
+    padding:10px 10px 10px 40px;
+}
